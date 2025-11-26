@@ -43,7 +43,8 @@ body.page{
 
 .nav__list{display:flex;gap:.5rem;list-style:none;margin:0;padding:0}
 .nav__link{
-  display:inline-block;padding:.5rem .75rem;background:#1b2040;
+  display:flex;align-items:center;justify-content:center;
+  padding:.5rem .75rem;background:#1b2040;
   border:1px solid var(--line);border-radius:.6rem;color:var(--text);
   text-decoration:underline;text-underline-offset:.18em;text-decoration-thickness:.08em;
   font-weight:600;letter-spacing:.015em
@@ -74,7 +75,8 @@ body.page{
 .topic{list-style:decimal;padding:.75rem;background:var(--surface-2)}
 
 .chip,.tag{
-  display:inline-block;padding:.15rem .5rem;border:1px solid var(--line);border-radius:.5rem;
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:.15rem .5rem;border:1px solid var(--line);border-radius:.5rem;
   background:#0f1433;color:#aab4ff;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700
 }
 .tag{margin-right:.35rem;background:#0f1538}
@@ -96,9 +98,14 @@ p,li{text-wrap:pretty}
   font-size:.95rem;line-height:1.5;letter-spacing:.015em;text-align:left
 }
 
-.card--with-media .card__media{margin:0 0 .6rem}
+.card--with-media .card__media{
+  margin:0 0 .6rem;
+  display:flex;
+}
+
 .card__img{
-  display:block;width:100%;border-radius:.6rem;border:1px solid var(--line);box-shadow:var(--shadow)
+  width:100%;
+  border-radius:.6rem;border:1px solid var(--line);box-shadow:var(--shadow)
 }
 .card__img--half-top{aspect-ratio:16/9;height:auto;object-fit:cover;object-position:50% 0%}
 .card__caption{margin:.35rem 0 0;color:var(--muted);font-size:.85rem;text-align:center}
