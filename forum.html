@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MangaSite — Форум</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="js/app.js"></script>
 </head>
 <body>
 
 <header class="header">
   <h1 class="header__title">MangaSite</h1>
-
   <nav class="nav">
     <ul class="nav__list">
       <li class="nav__item"><a class="nav__link" href="index.html">Главное</a></li>
-      <li class="nav__item"><a class="nav__link" href="index.html">Новинки</a></li>
-      <li class="nav__item"><a class="nav__link" href="index.html">Популярное</a></li>
+      <li class="nav__item"><a class="nav__link" href="new.html">Новинки</a></li>
+      <li class="nav__item"><a class="nav__link" href="popular.html">Популярное</a></li>
       <li class="nav__item"><a class="nav__link" href="forum.html">Форум</a></li>
+      <li class="nav__item"><a class="nav__link" href="feedback.html">Обратная связь</a></li>
     </ul>
   </nav>
 </header>
@@ -35,33 +36,33 @@
 
       <table class="table">
         <thead>
-          <tr>
-            <th scope="col">Тема</th>
-            <th scope="col">Автор</th>
-            <th scope="col">Ответов</th>
-          </tr>
+        <tr>
+          <th scope="col">Тема</th>
+          <th scope="col">Автор</th>
+          <th scope="col">Ответов</th>
+        </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Магическая битва — обсуждение серии</td>
-            <td>user123</td>
-            <td>14</td>
-          </tr>
-          <tr>
-            <td>Перерождение в слизь — любимые персонажи</td>
-            <td>mangaFan</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <td>Рекомендации похожих тайтлов</td>
-            <td>animeTalk</td>
-            <td>21</td>
-          </tr>
-          <tr>
-            <td>Новости сезона: что смотреть дальше?</td>
-            <td>otaku</td>
-            <td>5</td>
-          </tr>
+        <tr>
+          <td>Магическая битва — обсуждение серии</td>
+          <td>user123</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>Перерождение в слизь — любимые персонажи</td>
+          <td>mangaFan</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>Рекомендации похожих тайтлов</td>
+          <td>animeTalk</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>Новости сезона: что смотреть дальше?</td>
+          <td>otaku</td>
+          <td>5</td>
+        </tr>
         </tbody>
       </table>
     </section>
@@ -106,8 +107,8 @@
           <p class="news__meta">Завтра · 12:00</p>
         </li>
         <li class="news__item">
-          <p class="news__title">Событие: голосование за тайтл</p>
-          <p class="news__meta">Пятница · 20:00</p>
+          <p class="news__title">Оставьте отзыв на странице обратной связи</p>
+          <p class="news__meta">Сегодня · 14:00</p>
         </li>
       </ul>
     </section>
@@ -116,8 +117,9 @@
 </main>
 
 <footer class="footer">
-  <div class="footer__banner">Рекламный баннер во всю ширину футера</div>
+  <div class="footer__banner">Реклама</div>
   <p class="footer__text">© 2025 MangaSite</p>
+  <p class="footer__load" data-load-time>Время загрузки: ...</p>
 </footer>
 
 </body>
