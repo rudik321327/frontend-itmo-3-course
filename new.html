@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MangaSite — Новинки</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <h1 class="header__title">MangaSite</h1>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item"><a class="nav__link" href="index.html">Главное</a></li>
+      <li class="nav__item"><a class="nav__link" href="new.html">Новинки</a></li>
+      <li class="nav__item"><a class="nav__link" href="popular.html">Популярное</a></li>
+      <li class="nav__item"><a class="nav__link" href="forum.html">Форум</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="main">
+
+  <div class="main__content">
+
+    <section class="section">
+      <h2 class="section__title">Новинки</h2>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card__media">
+            <img src="./slime.jpeg" alt="Обложка Моё перерождение в слизь" class="card__image">
+          </div>
+          <h3 class="card__title">Моё перерождение в слизь</h3>
+          <p><strong>Жанр:</strong> фэнтези, боевик.</p>
+          <p><em>Описание:</em> История о юноше, который переродился в слизь.</p>
+        </article>
+
+        <article class="card">
+          <div class="card__media">
+            <img src="./jjk.jpg" alt="Обложка Магическая битва" class="card__image">
+          </div>
+          <h3 class="card__title">Магическая битва</h3>
+          <p><strong>Жанр:</strong> экшен, сверхъестественное.</p>
+          <p><em>Описание:</em> История о школьнике, который оказывается в мире проклятий и вступает в битву, чтобы защитить людей.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Таблица</h2>
+
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Название</th>
+          <th scope="col">Статус</th>
+          <th scope="col">Глав</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Solo Leveling</td>
+          <td>Завершено</td>
+          <td>179</td>
+        </tr>
+        <tr>
+          <td>Demon Slayer</td>
+          <td>Завершено</td>
+          <td>205</td>
+        </tr>
+        <tr>
+          <td>Jujutsu Kaisen</td>
+          <td>Выходит</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>One Piece</td>
+          <td>Выходит</td>
+          <td>—</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+
+  <aside class="aside">
+    <h2 class="section__title">Новости</h2>
+    <ul class="news">
+      <li class="news__item">
+        <p class="news__title">Выход серии: Jujutsu Kaisen</p>
+        <p class="news__meta">Сегодня · 19:00</p>
+      </li>
+      <li class="news__item">
+        <p class="news__title">Новая глава манги: One Piece</p>
+        <p class="news__meta">Завтра · 10:00</p>
+      </li>
+      <li class="news__item">
+        <p class="news__title">Трейлер сезона: Demon Slayer</p>
+        <p class="news__meta">Пятница · 18:30</p>
+      </li>
+    </ul>
+  </aside>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__banner">купи</div>
+  <p class="footer__text">© 2025 MangaSite</p>
+  <p class="footer__load" data-load-time>Время загрузки: ...</p>
+</footer>
+
+</body>
+</html>
