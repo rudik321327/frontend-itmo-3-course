@@ -2,13 +2,9 @@
     const KEY = "mangasite_feedback_v4";
 
     function load() {
-        try {
-            const raw = localStorage.getItem(KEY);
-            const data = raw ? JSON.parse(raw) : [];
-            return Array.isArray(data) ? data : [];
-        } catch (_) {
-            return [];
-        }
+        const raw = localStorage.getItem(KEY);
+        const data = raw ? JSON.parse(raw) : [];
+        return Array.isArray(data) ? data : [];
     }
 
     function save(items) {
@@ -85,8 +81,6 @@
         const empty = document.getElementById("emptyState");
         const template = document.getElementById("feedbackItemTemplate");
         const formError = document.getElementById("formError");
-
-        if (!form || !list || !empty || !template) return;
 
         const nameInput = document.getElementById("nameInput");
         const emailInput = document.getElementById("emailInput");
