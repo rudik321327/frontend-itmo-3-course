@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MangaSite — Популярное</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="js/app.js"></script>
+  <script type="module" src="js/app.js"></script>
 </head>
 <body>
 
@@ -17,7 +17,6 @@
       <li class="nav__item"><a class="nav__link" href="new.html">Новинки</a></li>
       <li class="nav__item"><a class="nav__link" href="popular.html">Популярное</a></li>
       <li class="nav__item"><a class="nav__link" href="forum.html">Форум</a></li>
-      <li class="nav__item"><a class="nav__link" href="feedback.html">Обратная связь</a></li>
     </ul>
   </nav>
 </header>
@@ -28,82 +27,45 @@
 
     <section class="section">
       <h2 class="section__title">Популярное</h2>
+      <p>Здесь может быть подборка самых обсуждаемых тайтлов.</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Подборка</h2>
 
       <div class="cards">
         <article class="card">
-          <h3 class="card__title">Solo Leveling</h3>
-          <p><strong>Жанр:</strong> экшен, фэнтези.</p>
-          <p><em>Описание:</em> История об охотнике, который становится сильнее.</p>
+          <h3 class="card__title">One Piece</h3>
+          <p><strong>Почему в топе:</strong> огромная база фанатов и постоянные новые главы.</p>
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">Jujutsu Kaisen</h3>
+          <p><strong>Почему в топе:</strong> хайповый экшен и активное комьюнити.</p>
         </article>
 
         <article class="card">
           <h3 class="card__title">Demon Slayer</h3>
-          <p><strong>Жанр:</strong> экшен, приключения.</p>
-          <p><em>Описание:</em> История о борьбе с демонами и защите семьи.</p>
+          <p><strong>Почему в топе:</strong> мощная анимация и культовые персонажи.</p>
         </article>
       </div>
-    </section>
-
-    <section class="section">
-      <h2 class="section__title">Таблица</h2>
-
-      <table class="table">
-        <thead>
-        <tr>
-          <th scope="col">Название</th>
-          <th scope="col">Статус</th>
-          <th scope="col">Глав</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>Solo Leveling</td>
-          <td>Завершено</td>
-          <td>179</td>
-        </tr>
-        <tr>
-          <td>Demon Slayer</td>
-          <td>Завершено</td>
-          <td>205</td>
-        </tr>
-        <tr>
-          <td>Jujutsu Kaisen</td>
-          <td>Выходит</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>One Piece</td>
-          <td>Выходит</td>
-          <td>—</td>
-        </tr>
-        </tbody>
-      </table>
     </section>
 
   </div>
 
   <aside class="aside">
-    <h2 class="section__title">Новости</h2>
-    <ul class="news">
-      <li class="news__item">
-        <p class="news__title">Топ недели обновлён</p>
-        <p class="news__meta">Сегодня · 11:00</p>
-      </li>
-      <li class="news__item">
-        <p class="news__title">Добавлены новые рейтинги</p>
-        <p class="news__meta">Вчера · 20:15</p>
-      </li>
-      <li class="news__item">
-        <p class="news__title">Оставьте отзыв на странице обратной связи</p>
-        <p class="news__meta">Сегодня · 14:00</p>
-      </li>
-    </ul>
+    <h2 class="section__title">Популярное</h2>
+    <ol class="list">
+      <li>One Piece</li>
+      <li>Jujutsu Kaisen</li>
+      <li>Demon Slayer</li>
+    </ol>
   </aside>
 
 </main>
 
 <footer class="footer">
-  <div class="footer__banner">Рекламна</div>
+  <div class="footer__banner">купи</div>
   <p class="footer__text">© 2025 MangaSite</p>
   <p class="footer__load" data-load-time>Время загрузки: ...</p>
 </footer>

@@ -1,106 +1,116 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MangaSite — Главное</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="js/app.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MangaSite — Главное</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="js/app.js"></script>
 </head>
 <body>
 
 <header class="header">
-    <h1 class="header__title">MangaSite</h1>
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link" href="index.html">Главное</a></li>
-            <li class="nav__item"><a class="nav__link" href="new.html">Новинки</a></li>
-            <li class="nav__item"><a class="nav__link" href="popular.html">Популярное</a></li>
-            <li class="nav__item"><a class="nav__link" href="forum.html">Форум</a></li>
-            <li class="nav__item"><a class="nav__link" href="feedback.html">Обратная связь</a></li>
-        </ul>
-    </nav>
+  <h1 class="header__title">MangaSite</h1>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item"><a class="nav__link" href="index.html">Главное</a></li>
+      <li class="nav__item"><a class="nav__link" href="new.html">Новинки</a></li>
+      <li class="nav__item"><a class="nav__link" href="popular.html">Популярное</a></li>
+      <li class="nav__item"><a class="nav__link" href="forum.html">Форум</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main class="main">
 
-    <div class="main__content">
+  <div class="main__content">
 
-        <section class="section">
-            <h2 class="section__title">Главное</h2>
-            <p>Это главная страница проекта.</p>
-        </section>
+    <section class="section">
+      <h2 class="section__title">Главное</h2>
+      <p>Это главная страница проекта.</p>
+    </section>
 
-        <section class="section">
-            <h2 class="section__title">Сниппет кода</h2>
-            <pre class="code"><code>
+    <section class="section">
+      <h2 class="section__title">Сниппет кода</h2>
+      <pre class="code"><code>
 const manga = ["Naruto", "One Piece", "Bleach"];
 manga.forEach(title => console.log(title));
       </code></pre>
-        </section>
+    </section>
 
-        <section class="section">
-            <h2 class="section__title">Таблица</h2>
+    <section class="section">
+      <h2 class="section__title">Таблица</h2>
 
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">Название</th>
-                    <th scope="col">Статус</th>
-                    <th scope="col">Глав</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Solo Leveling</td>
-                    <td>Завершено</td>
-                    <td>179</td>
-                </tr>
-                <tr>
-                    <td>Demon Slayer</td>
-                    <td>Завершено</td>
-                    <td>205</td>
-                </tr>
-                <tr>
-                    <td>Jujutsu Kaisen</td>
-                    <td>Выходит</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td>One Piece</td>
-                    <td>Выходит</td>
-                    <td>—</td>
-                </tr>
-                </tbody>
-            </table>
-        </section>
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Название</th>
+          <th scope="col">Статус</th>
+          <th scope="col">Глав</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Solo Leveling</td>
+          <td>Завершено</td>
+          <td>179</td>
+        </tr>
+        <tr>
+          <td>Demon Slayer</td>
+          <td>Завершено</td>
+          <td>205</td>
+        </tr>
+        <tr>
+          <td>Jujutsu Kaisen</td>
+          <td>Выходит</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>One Piece</td>
+          <td>Выходит</td>
+          <td>—</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
 
-    </div>
+  </div>
 
-    <aside class="aside">
-        <h2 class="section__title">Новости</h2>
-        <ul class="news">
-            <li class="news__item">
-                <p class="news__title">Обновление каталога: новые тайтлы</p>
-                <p class="news__meta">Понедельник · 09:00</p>
-            </li>
-            <li class="news__item">
-                <p class="news__title">Трейлер сезона: Demon Slayer</p>
-                <p class="news__meta">Пятница · 18:30</p>
-            </li>
-            <li class="news__item">
-                <p class="news__title">Выход серии: Jujutsu Kaisen</p>
-                <p class="news__meta">Сегодня · 19:00</p>
-            </li>
-        </ul>
-    </aside>
+  <aside class="aside">
+    <h2 class="section__title">Популярное</h2>
+
+    <ol class="list">
+      <li>Solo Leveling</li>
+      <li>Demon Slayer</li>
+      <li>Jujutsu Kaisen</li>
+    </ol>
+
+    <section class="section section--news">
+      <h2 class="section__title">Новости</h2>
+
+      <ul class="news">
+        <li class="news__item">
+          <p class="news__title">Обновление каталога: новые тайтлы</p>
+          <p class="news__meta">Понедельник · 09:00</p>
+        </li>
+        <li class="news__item">
+          <p class="news__title">Трейлер сезона: Demon Slayer</p>
+          <p class="news__meta">Пятница · 18:30</p>
+        </li>
+        <li class="news__item">
+          <p class="news__title">Анонс события: фестиваль аниме</p>
+          <p class="news__meta">Суббота · 12:00</p>
+        </li>
+      </ul>
+    </section>
+  </aside>
 
 </main>
 
 <footer class="footer">
-    <div class="footer__banner">Реклама</div>
-    <p class="footer__text">© 2025 MangaSite</p>
-    <p class="footer__load" data-load-time>Время загрузки: ...</p>
+  <div class="footer__banner">купи</div>
+  <p class="footer__text">© 2025 MangaSite</p>
+  <p class="footer__load" data-load-time>Время загрузки: ...</p>
 </footer>
 
 </body>

@@ -4,8 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MangaSite — Форум</title>
+
   <link rel="stylesheet" href="styles.css">
-  <script src="js/app.js"></script>
+
+  <!-- CSS-тема highlight.js: делает подсветку реально видимой -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/network.js"></script>
+  <script type="module" src="js/markdown.js"></script>
 </head>
 <body>
 
@@ -17,7 +24,6 @@
       <li class="nav__item"><a class="nav__link" href="new.html">Новинки</a></li>
       <li class="nav__item"><a class="nav__link" href="popular.html">Популярное</a></li>
       <li class="nav__item"><a class="nav__link" href="forum.html">Форум</a></li>
-      <li class="nav__item"><a class="nav__link" href="feedback.html">Обратная связь</a></li>
     </ul>
   </nav>
 </header>
@@ -28,60 +34,53 @@
 
     <section class="section">
       <h2 class="section__title">Форум</h2>
-      <p>Обсуждения по манге и аниме. Ниже примеры тем и сообщений.</p>
+      <p>Обсуждения по манге и аниме.</p>
     </section>
 
     <section class="section">
-      <h2 class="section__title">Темы</h2>
+      <h2 class="section__title">Новости аниме</h2>
 
-      <table class="table">
-        <thead>
-        <tr>
-          <th scope="col">Тема</th>
-          <th scope="col">Автор</th>
-          <th scope="col">Ответов</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>Магическая битва — обсуждение серии</td>
-          <td>user123</td>
-          <td>14</td>
-        </tr>
-        <tr>
-          <td>Перерождение в слизь — любимые персонажи</td>
-          <td>mangaFan</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>Рекомендации похожих тайтлов</td>
-          <td>animeTalk</td>
-          <td>21</td>
-        </tr>
-        <tr>
-          <td>Новости сезона: что смотреть дальше?</td>
-          <td>otaku</td>
-          <td>5</td>
-        </tr>
-        </tbody>
-      </table>
+      <div class="toolbar">
+        <button class="btn" id="reload-live" type="button">Обновить новости</button>
+      </div>
+
+      <div class="loader-wrap" id="live-loader" hidden>
+        <div class="loader" aria-label="Загрузка" role="status"></div>
+        <p class="hint">Загрузка новостей...</p>
+      </div>
+
+      <div id="live-error" class="error" hidden></div>
+      <div id="live-content" class="live-content" hidden></div>
+
+      <template id="tpl-news">
+        <article class="post">
+          <h3 class="post__title"></h3>
+          <p class="post__meta"></p>
+          <p class="post__body"></p>
+          <p class="hint"><a class="news__link" target="_blank" rel="noopener noreferrer">Открыть</a></p>
+        </article>
+      </template>
     </section>
 
     <section class="section">
-      <h2 class="section__title">Последние сообщения</h2>
+      <h2 class="section__title">Редактор поста (Markdown)</h2>
 
-      <div class="cards">
-        <article class="card">
-          <h3 class="card__title">Тема: Магическая битва — обсуждение серии</h3>
-          <p><strong>Автор:</strong> user123</p>
-          <p><em>Сообщение:</em> Как вам последняя серия? Какие моменты были самыми сильными?</p>
-        </article>
+      <div class="md">
+        <div class="md__editor">
+          <label class="hint" for="md-input">Текст поста:</label>
+          <textarea id="md-input" class="md__textarea" rows="12"></textarea>
 
-        <article class="card">
-          <h3 class="card__title">Тема: Рекомендации похожих тайтлов</h3>
-          <p><strong>Автор:</strong> animeTalk</p>
-          <p><em>Сообщение:</em> Посоветуйте что-то с похожей атмосферой и динамикой.</p>
-        </article>
+          <div class="toolbar">
+            <button class="btn" id="md-render" type="button">Обновить превью</button>
+            <button class="btn" id="md-example" type="button">Вставить пример</button>
+          </div>
+
+        </div>
+
+        <div class="md__preview">
+          <p class="hint">Превью:</p>
+          <div id="md-preview" class="md__preview-box"></div>
+        </div>
       </div>
     </section>
 
@@ -94,30 +93,12 @@
       <li>Пишите по теме</li>
       <li>Ссылки только по делу</li>
     </ol>
-
-    <section class="section section--news">
-      <h2 class="section__title">Новости</h2>
-      <ul class="news">
-        <li class="news__item">
-          <p class="news__title">Обновление форума</p>
-          <p class="news__meta">Сегодня · 16:00</p>
-        </li>
-        <li class="news__item">
-          <p class="news__title">Новая тема недели</p>
-          <p class="news__meta">Завтра · 12:00</p>
-        </li>
-        <li class="news__item">
-          <p class="news__title">Оставьте отзыв на странице обратной связи</p>
-          <p class="news__meta">Сегодня · 14:00</p>
-        </li>
-      </ul>
-    </section>
   </aside>
 
 </main>
 
 <footer class="footer">
-  <div class="footer__banner">Реклама</div>
+  <div class="footer__banner">купи</div>
   <p class="footer__text">© 2025 MangaSite</p>
   <p class="footer__load" data-load-time>Время загрузки: ...</p>
 </footer>
